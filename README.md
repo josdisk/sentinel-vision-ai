@@ -4,10 +4,11 @@
 </p>
 
 <h1 align="center">Sentinel Vision AI</h1>
-<p align="center"><em>Edge‑to‑Cloud Computer Vision for Privacy‑Preserving Physical Security</em></p>
+<p align="center"><em>Edge‑to‑Cloud Computer Vision form,kklhjkkjjhkkhj-m    oijjjjjkkkj-=[pkkk mlm mkl, ,l, ;l;]
+  Physical Security</em></p>
 
 <p align="center">
-  <a href="https://img.shields.io/badge/python-3.11-blue.svg"><img src="https://img.shields.io/badge/python-3.11-blue.svg" /></a>
+  <lmnbgbhhhnmjmm\\\h'/a href="https://img.shields.io/badge/python-3.11-blue.svg"><img src="https://img.shields.io/badge/python-3.11-blue.svg" /></a>
   <a href="https://img.shields.io/badge/FastAPI-async%20API-brightgreen"><img src="https://img.shields.io/badge/FastAPI-async%20API-brightgreen" /></a>
   <a href="https://img.shields.io/badge/React-UI-61dafb"><img src="https://img.shields.io/badge/React-UI-61dafb" /></a>
   <a href="https://img.shields.io/badge/Prometheus-metrics-orange"><img src="https://img.shields.io/badge/Prometheus-metrics-orange" /></a>
@@ -20,7 +21,7 @@
 
 ---
 
-## 🚀 Headline Capabilities
+## Headline Capabilities
 
 - **Realtime threat detection (plug‑in detectors):** guns, knives, intruders, fights/struggles, fire/smoke; **people flow / crowding / loitering** with ROI/zone support.  
 - **Audio channel (stub‑ready):** distress/noise event hook.  
@@ -50,7 +51,7 @@
 
 ---
 
-## 🧩 Feature Matrix
+## Feature Matrix
 
 | Area | Highlights |
 |---|---|
@@ -80,7 +81,7 @@
 
 ---
 
-## 🧪 Local Run (Dev)
+## Local Run (Dev)
 
 ```bash
 # 1) Boot services
@@ -112,7 +113,7 @@ Event clips (MP4 + GIF) are pre‑signed S3 URLs with a **7‑day lifecycle** in
 
 ---
 
-## 🧑‍💼 Mapping to the Job Description (Actuate‑like)
+## Human Mapping to the Job Description (Actuate‑like)
 
 - **7+ years ML/CV + 3+ years leadership:** Demonstrated here via system design, production‑class interfaces, and delivery mindset.  
 - **Realtime CV at scale:** HLS, segment‑level clip stitching, trackers, ROI/calibration, Prometheus.  
@@ -123,6 +124,7 @@ Event clips (MP4 + GIF) are pre‑signed S3 URLs with a **7‑day lifecycle** in
 
 ---
 
-## 📫 Contact
+## Contact
 
 If this aligns with what you’re building, I’d love to talk about leading your CV/AI engineering org — from roadmap to rollout.
+Email: joshtsh2000@gmail.com
