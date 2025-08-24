@@ -4,11 +4,10 @@
 </p>
 
 <h1 align="center">Sentinel Vision AI</h1>
-<p align="center"><em>Edge‑to‑Cloud Computer Vision form,kklhjkkjjhkkhj-m    oijjjjjkkkj-=[pkkk mlm mkl, ,l, ;l;]
-  Physical Security</em></p>
+<p align="center"><em>Trasform any camera ( CCTV, Dashcam, Phone Camera, Webcam, et...) Into AI Powered able to detect people, weapon, and suspecious activities</em></p>
 
 <p align="center">
-  <lmnbgbhhhnmjmm\\\h'/a href="https://img.shields.io/badge/python-3.11-blue.svg"><img src="https://img.shields.io/badge/python-3.11-blue.svg" /></a>
+  <a href="https://img.shields.io/badge/python-3.11-blue.svg"><img src="https://img.shields.io/badge/python-3.11-blue.svg" /></a>
   <a href="https://img.shields.io/badge/FastAPI-async%20API-brightgreen"><img src="https://img.shields.io/badge/FastAPI-async%20API-brightgreen" /></a>
   <a href="https://img.shields.io/badge/React-UI-61dafb"><img src="https://img.shields.io/badge/React-UI-61dafb" /></a>
   <a href="https://img.shields.io/badge/Prometheus-metrics-orange"><img src="https://img.shields.io/badge/Prometheus-metrics-orange" /></a>
@@ -39,7 +38,7 @@
 
 ---
 
-## 🧭 Why this matters for a Head of Engineering (Actuate‑style)
+## Why this matters for a Head of Engineering (Actuate‑style)
 
 **What you need:** someone who can translate cutting‑edge CV research into **operational product** — across edge constraints, privacy, reliability, and speed — while coaching a team and building the platform that ships continuously.
 
@@ -55,7 +54,16 @@
 
 | Area | Highlights |
 |---|---|
-| **Detectors** | 🔫 Guns, 🔪 Knives, 🚶 Intruder, 🧯 Fire/Smoke, 🧍 Crowd/Flow, 🕒 Loitering, 🥊 Fight/Struggle, 🔊 Distress Audio *(stub‑ready)* |
+| **Detectors** | 
+🔫 Guns, 
+🔪 Knives, 
+🚶 Intruder, 
+🧯 Fire/Smoke, 
+🧍 Crowd/Flow, 
+🕒 Loitering, 
+🥊 Fight/Struggle, 
+🔊 Distress Audio *(stub‑ready)* 
+|
 | **Tracking** | Edge **multi‑object tracking**, pluggable interface (Centroid default; OC‑SORT/ByteTrack compatible) |
 | **Zones & Calibration** | ROI polygon editor; 4‑point **homography** for pixel→meter (social distance, area normalization) |
 | **Video** | HLS playback (hls.js), **precise segment stitching** for MP4 clips + **GIF previews** |
