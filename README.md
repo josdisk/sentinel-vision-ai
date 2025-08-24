@@ -4,7 +4,7 @@
 </p>
 
 <h1 align="center">Sentinel Vision AI</h1>
-<p align="center"><em>Trasform any camera ( CCTV, Dashcam, Phone Camera, Webcam, et...) Into AI Powered able to detect people, weapon, and suspecious activities</em></p>
+<p align="center"><em>Edge‑to‑Cloud Computer Vision for Privacy‑Preserving Physical Security</em></p>
 
 <p align="center">
   <a href="https://img.shields.io/badge/python-3.11-blue.svg"><img src="https://img.shields.io/badge/python-3.11-blue.svg" /></a>
@@ -20,7 +20,7 @@
 
 ---
 
-## Headline Capabilities
+## 🚀 Headline Capabilities
 
 - **Realtime threat detection (plug‑in detectors):** guns, knives, intruders, fights/struggles, fire/smoke; **people flow / crowding / loitering** with ROI/zone support.  
 - **Audio channel (stub‑ready):** distress/noise event hook.  
@@ -38,7 +38,7 @@
 
 ---
 
-## Why this matters for a Head of Engineering (Actuate‑style)
+## 🧭 Why this matters for a Head of Engineering (Actuate‑style)
 
 **What you need:** someone who can translate cutting‑edge CV research into **operational product** — across edge constraints, privacy, reliability, and speed — while coaching a team and building the platform that ships continuously.
 
@@ -50,12 +50,11 @@
 
 ---
 
-## Feature Matrix
+## 🧩 Feature Matrix
 
 | Area | Highlights |
 |---|---|
-| **Detectors** | 🔫 Guns, 🔪 Knives, 🚶 Intruder, 🧯 Fire/Smoke, 🧍 Crowd/Flow, 🕒 Loitering, 🥊 Fight/Struggle, 🔊 Distress Audio *(stub‑ready)
-* |
+| **Detectors** | 🔫 Guns, 🔪 Knives, 🚶 Intruder, 🧯 Fire/Smoke, 🧍 Crowd/Flow, 🕒 Loitering, 🥊 Fight/Struggle, 🔊 Distress Audio *(stub‑ready)* |
 | **Tracking** | Edge **multi‑object tracking**, pluggable interface (Centroid default; OC‑SORT/ByteTrack compatible) |
 | **Zones & Calibration** | ROI polygon editor; 4‑point **homography** for pixel→meter (social distance, area normalization) |
 | **Video** | HLS playback (hls.js), **precise segment stitching** for MP4 clips + **GIF previews** |
@@ -81,7 +80,7 @@
 
 ---
 
-## Local Run (Dev)
+## 🧪 Local Run (Dev)
 
 ```bash
 # 1) Boot services
@@ -113,7 +112,7 @@ Event clips (MP4 + GIF) are pre‑signed S3 URLs with a **7‑day lifecycle** in
 
 ---
 
-## Human Mapping to the Job Description (Actuate‑like)
+## 🧑‍💼 Mapping to the Job Description (Actuate‑like)
 
 - **7+ years ML/CV + 3+ years leadership:** Demonstrated here via system design, production‑class interfaces, and delivery mindset.  
 - **Realtime CV at scale:** HLS, segment‑level clip stitching, trackers, ROI/calibration, Prometheus.  
@@ -124,7 +123,6 @@ Event clips (MP4 + GIF) are pre‑signed S3 URLs with a **7‑day lifecycle** in
 
 ---
 
-## Contact
+## 📫 Contact
 
 If this aligns with what you’re building, I’d love to talk about leading your CV/AI engineering org — from roadmap to rollout.
-Email: joshtsh2000@gmail.com
