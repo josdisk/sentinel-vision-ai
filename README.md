@@ -4,7 +4,7 @@
 </p>
 
 <h1 align="center">Sentinel Vision AI</h1>
-<p align="center"><em>Edge‑to‑Cloud Computer Vision for Privacy‑Preserving Physical Security</em></p>
+<p align="center"><em>Turn any camera (CCTV, DashCam, WebCam, Phone Cam, etc... ) into an AI Power detecting Obtect(Gun, Knife), Activity (Fire, Face Recognition, Intrusion, Motions, Fight, Struggles, Distress Audio) </em></p>
 
 <p align="center">
   <a href="https://img.shields.io/badge/python-3.11-blue.svg"><img src="https://img.shields.io/badge/python-3.11-blue.svg" /></a>
@@ -20,7 +20,7 @@
 
 ---
 
-## 🚀 Headline Capabilities
+## Headline Capabilities
 
 - **Realtime threat detection (plug‑in detectors):** guns, knives, intruders, fights/struggles, fire/smoke; **people flow / crowding / loitering** with ROI/zone support.  
 - **Audio channel (stub‑ready):** distress/noise event hook.  
@@ -50,7 +50,7 @@
 
 ---
 
-## 🧩 Feature Matrix
+## Feature Matrix
 
 | Area | Highlights |
 |---|---|
@@ -80,7 +80,7 @@
 
 ---
 
-## 🧪 Local Run (Dev)
+## Local Run (Dev)
 
 ```bash
 # 1) Boot services
@@ -105,14 +105,14 @@ Event clips (MP4 + GIF) are pre‑signed S3 URLs with a **7‑day lifecycle** in
 
 ---
 
-## 🧭 Roadmap (representative)
+## Roadmap (representative)
 
 - ✅ Edge tracking & heatmaps • ✅ OIDC • ✅ ROI/Calibration • ✅ HLS clips + GIF • ✅ Slack threads + correlation  
 - 🔜 Full audio pipeline, face blurring in-stream, on‑device models (Jetson/ONNX), alert dedup across sites, S3 lifecycle per org, multi‑tenant RBAC/OIDC, SOC2 hardening.
 
 ---
 
-## 🧑‍💼 Mapping to the Job Description (Actuate‑like)
+## Mapping to the Job Description (Actuate‑like)
 
 - **7+ years ML/CV + 3+ years leadership:** Demonstrated here via system design, production‑class interfaces, and delivery mindset.  
 - **Realtime CV at scale:** HLS, segment‑level clip stitching, trackers, ROI/calibration, Prometheus.  
@@ -123,6 +123,7 @@ Event clips (MP4 + GIF) are pre‑signed S3 URLs with a **7‑day lifecycle** in
 
 ---
 
-## 📫 Contact
+## Contact
+Email: joshtsh2000@gmail.com
 
-If this aligns with what you’re building, I’d love to talk about leading your CV/AI engineering org — from roadmap to rollout.
+This is an Open Source code I started, feel free to ccontribute
