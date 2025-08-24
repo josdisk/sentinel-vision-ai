@@ -62,8 +62,8 @@
 🧍 Crowd/Flow, 
 🕒 Loitering, 
 🥊 Fight/Struggle, 
-🔊 Distress Audio *(stub‑ready)* 
-|
+🔊 Distress Audio *(stub‑ready)
+* |
 | **Tracking** | Edge **multi‑object tracking**, pluggable interface (Centroid default; OC‑SORT/ByteTrack compatible) |
 | **Zones & Calibration** | ROI polygon editor; 4‑point **homography** for pixel→meter (social distance, area normalization) |
 | **Video** | HLS playback (hls.js), **precise segment stitching** for MP4 clips + **GIF previews** |
