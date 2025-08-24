@@ -54,15 +54,7 @@
 
 | Area | Highlights |
 |---|---|
-| **Detectors** | 
-🔫 Guns, 
-🔪 Knives, 
-🚶 Intruder, 
-🧯 Fire/Smoke, 
-🧍 Crowd/Flow, 
-🕒 Loitering, 
-🥊 Fight/Struggle, 
-🔊 Distress Audio *(stub‑ready)
+| **Detectors** | 🔫 Guns, 🔪 Knives, 🚶 Intruder, 🧯 Fire/Smoke, 🧍 Crowd/Flow, 🕒 Loitering, 🥊 Fight/Struggle, 🔊 Distress Audio *(stub‑ready)
 * |
 | **Tracking** | Edge **multi‑object tracking**, pluggable interface (Centroid default; OC‑SORT/ByteTrack compatible) |
 | **Zones & Calibration** | ROI polygon editor; 4‑point **homography** for pixel→meter (social distance, area normalization) |
