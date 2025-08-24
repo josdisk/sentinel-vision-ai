@@ -1,0 +1,100 @@
+{
+  "title": "Sentinel Vision AI",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "WebSocket Clients",
+      "targets": [
+        {
+          "expr": "ws_clients"
+        }
+      ],
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "stat",
+      "title": "People (cam_1)",
+      "targets": [
+        {
+          "expr": "person_count{camera_id='cam_1'}"
+        }
+      ],
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      }
+    },
+    {
+      "type": "stat",
+      "title": "Correlation groups",
+      "targets": [
+        {
+          "expr": "increase(alert_correlation_groups_total[5m])"
+        }
+      ],
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      }
+    },
+    {
+      "type": "graph",
+      "title": "Alerts / min",
+      "targets": [
+        {
+          "expr": "sum(increase(alerts_total[1m]))"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      }
+    },
+    {
+      "type": "table",
+      "title": "Alerts by type (5m)",
+      "targets": [
+        {
+          "expr": "sum(increase(alerts_total[5m])) by (type)"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      }
+    },
+    {
+      "type": "graph",
+      "title": "Clip uploads & failures",
+      "targets": [
+        {
+          "expr": "increase(clip_uploads_total[15m])"
+        },
+        {
+          "expr": "increase(clip_failures_total[15m])"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      }
+    }
+  ],
+  "schemaVersion": 38,
+  "version": 1
+}

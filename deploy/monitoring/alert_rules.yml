@@ -1,0 +1,18 @@
+groups:
+- name: sva_alerts
+  rules:
+  - alert: HighAlertRate
+    expr: sum(increase(alerts_total[1m])) > 20
+    for: 1m
+    labels: { severity: warning }
+    annotations: { summary: "High alert rate", description: "More than 20 alerts in the last minute." }
+  - alert: NoAlertsRecently
+    expr: time() - last_alert_ts > 300
+    for: 2m
+    labels: { severity: info }
+    annotations: { summary: "No recent alerts", description: "No alerts for more than 5 minutes." }
+  - alert: ClipFailuresSpike
+    expr: increase(clip_failures_total[5m]) > 3
+    for: 0m
+    labels: { severity: warning }
+    annotations: { summary: "Clip failures spiking", description: "More than 3 failures in 5 minutes." }

@@ -1,0 +1,132 @@
+services:
+  backend:
+    build: ../backend
+    image: sentinel-vision-backend:v7
+    env_file: ../.env
+    environment:
+      - FRONTEND_URL=http://localhost:5173
+      - HLS_OUTPUT_DIR=/app/hls
+    ports: ["8000:8000"]
+    volumes:
+      - ../hls:/app/hls
+
+  frontend:
+    image: nginx:alpine
+    ports: ["5173:80"]
+    volumes:
+      - ../frontend:/usr/share/nginx/html:ro
+
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=sentinel
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  restreamer:
+    image: jrottenberg/ffmpeg:4.4-alpine
+    depends_on: [backend]
+    volumes:
+      - ../hls:/hls
+      - ../data/samples:/samples
+    entrypoint: ["/bin/sh","-c"]
+    command:
+      - >
+        set -e;
+        apk add --no-cache python3 py3-numpy py3-opencv || true;
+        python3 - <<'PY'
+import cv2, numpy as np
+w,h=640,360
+fourcc=cv2.VideoWriter_fourcc(*'mp4v')
+vw=cv2.VideoWriter('/samples/demo.mp4', fourcc, 15, (w,h))
+for i in range(300):
+  frame=np.full((h,w,3), 240, np.uint8)
+  for p in range(5):
+    x=int((i*5 + p*60) % (w-60)); y=120 + int(40*np.sin((i+p)/10))
+    cv2.rectangle(frame, (x,y), (x+40,y+80), (60,60,200), 2)
+  cv2.putText(frame, f'frame {i}', (10,h-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (90,90,90), 1)
+  vw.write(frame)
+vw.release()
+print('demo.mp4 written')
+PY
+        ;
+        mkdir -p /hls/cam_1;
+        ffmpeg -re -stream_loop -1 -i /samples/demo.mp4 -c:v libx264 -f hls -hls_time 2 -hls_list_size 8 -hls_flags delete_segments /hls/cam_1/index.m3u8
+
+  agent:
+    build: ../edge_agent
+    image: sentinel-vision-agent:v7
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - API_KEY=changeme
+      - CAMERA_ID=cam_1
+      - VIDEO_PATH=/samples/demo.mp4
+      - TRACKER_IMPL=centroid
+    volumes:
+      - ../data/samples:/samples
+      - ../models:/models
+
+  minio:
+    image: quay.io/minio/minio:RELEASE.2024-07-10T18-04-10Z
+    command: server /data --console-address ":9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    ports: ["9000:9000","9001:9001"]
+    volumes:
+      - minio:/data
+
+  createbucket:
+    image: quay.io/minio/mc:RELEASE.2024-07-10T19-48-16Z
+    depends_on: [minio]
+    entrypoint: ["/bin/sh","-c"]
+    environment:
+      - MC_HOST_local=http://minioadmin:minioadmin@minio:9000
+    command: >
+      /bin/sh -c "
+      /usr/bin/mc mb -p local/clips || true;
+      /usr/bin/mc anonymous set download local/clips || true;
+      # lifecycle: expire all objects after 7 days (dev defaults)
+      cat <<'JSON' > /tmp/ilm.json
+      {
+        "Rules": [{
+          "ID": "expire7d",
+          "Status": "Enabled",
+          "Expiration": { "Days": 7 },
+          "Filter": { "Prefix": "" }
+        }]
+      }
+      JSON
+      ;
+      /usr/bin/mc ilm import local/clips < /tmp/ilm.json || true;
+      "
+
+  prometheus:
+    profiles: ["monitoring"]
+    image: prom/prometheus:v2.54.1
+    ports: ["9090:9090"]
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./monitoring/alert_rules.yml:/etc/prometheus/alert_rules.yml:ro
+    depends_on: [backend]
+
+  grafana:
+    profiles: ["monitoring"]
+    image: grafana/grafana:11.1.4
+    ports: ["3000:3000"]
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on: [prometheus]
+
+volumes:
+  pgdata:
+  minio:
